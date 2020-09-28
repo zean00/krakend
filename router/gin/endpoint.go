@@ -135,6 +135,7 @@ func NewRequest(headersToSend []string) func(*gin.Context, []string) *proxy.Requ
 
 		return &proxy.Request{
 			Method:  c.Request.Method,
+			URL:     c.Request.URL,
 			Query:   query,
 			Body:    c.Request.Body,
 			Params:  params,
